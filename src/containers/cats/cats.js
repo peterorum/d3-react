@@ -16,6 +16,7 @@ import { makeCatUrlSelector } from 'Redux/selectors/cat-selectors';
 const PhotoBox = styled(Box)`
 
   text-align: center;
+  min-height: 75vh;
 
   &.photo {
     transition: opacity 1s ease-in;
