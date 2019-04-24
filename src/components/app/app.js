@@ -27,7 +27,7 @@ const theme = {
 
 export const App = () => (
   <>
-    <Grommet theme={theme} full>
+    <Grommet theme={theme}>
       <GlobalStyle />
 
       <ReactFullpage
