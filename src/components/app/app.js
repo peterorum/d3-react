@@ -9,7 +9,7 @@ import { GlobalStyle } from 'Styles/global-styles';
 import { colors } from 'Styles/colors';
 
 import Cats from 'Containers/cats/cats';
-import Page2 from 'Containers/page-2/page-2';
+import BubbleChart from 'Containers/bubble-chart/bubble-chart';
 import Page3 from 'Containers/page-3/page-3';
 
 const theme = {
@@ -32,7 +32,7 @@ export const App = () => (
         render={() => (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <Page2 />
+              <BubbleChart />
             </div>
             <div className="section">
               <Cats />
