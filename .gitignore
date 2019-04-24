@@ -1,0 +1,14 @@
+/node_modules
+/coverage
+/dist
+
+stats.json
+
+.DS_Store
+
+npm-debug.log*
+
+*.sublime-*
+.tern-port
+
+nginx.conf

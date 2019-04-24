@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo deploying cats
+
+npm run build
+
+rsync -crv dist/* server/* misc/* functal:/home/ec2-user/cats/
