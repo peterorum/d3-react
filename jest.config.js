@@ -17,6 +17,7 @@ module.exports = {
       '<rootDir>/mocks/image-mock.js',
     '^Components(.*)$': '<rootDir>/src/components$1',
     '^Containers(.*)$': '<rootDir>/src/containers$1',
+    '^Config(.*)$': '<rootDir>/src/config$1',
     '^Styles(.*)$': '<rootDir>/src/styles$1',
     '^Images(.*)$': '<rootDir>/images$1',
     '^Redux(.*)$': '<rootDir>/src/redux$1',
