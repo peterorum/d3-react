@@ -8,12 +8,15 @@ import { connect } from 'react-redux';
 
 import styled from 'styled-components';
 
-import { Box, Button, Image } from 'grommet';
+import { Box, Button, Image, Text, Anchor } from 'grommet';
 
 import { getCatUrl } from 'Redux/actions/cat-actions';
 import { makeCatUrlSelector } from 'Redux/selectors/cat-selectors';
 
 const PhotoBox = styled(Box)`
+
+  text-align: center;
+
   &.photo {
     transition: opacity 1s ease-in;
     opacity: 1;
@@ -29,7 +32,7 @@ const PhotoBox = styled(Box)`
   }
 `;
 
-export const Main = ({ catUrl, handleCatUrl }) => {
+export const Cats = ({ catUrl, handleCatUrl }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   // on mount
@@ -61,14 +64,30 @@ export const Main = ({ catUrl, handleCatUrl }) => {
 
       <PhotoBox pad="medium" className={`photo ${isLoading ? 'hidden' : ''}`}>
         {catUrl && (
-          <Image src={catUrl} onLoad={() => setIsLoading(false)} fit="cover" />
+          <>
+            <div>
+              <Image
+                src={catUrl}
+                onLoad={() => setIsLoading(false)}
+                fit="cover"
+              />
+            </div>
+            <div>
+              <Text size="small">
+                Cats from{' '}
+                <Anchor href="https://thecatapi.com/" target="_blank">
+                  The Cat API
+                </Anchor>
+              </Text>
+            </div>
+          </>
         )}
       </PhotoBox>
     </Box>
   );
 };
 
-Main.propTypes = {
+Cats.propTypes = {
   catUrl: PropTypes.string,
   handleCatUrl: PropTypes.func,
 };
@@ -81,9 +100,9 @@ const mapDispatchToProps = dispatch => ({
   handleCatUrl: () => dispatch(getCatUrl()),
 });
 
-const MainContainer = connect(
+const CatsContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Main);
+)(Cats);
 
-export default MainContainer;
+export default CatsContainer;

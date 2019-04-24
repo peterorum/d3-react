@@ -4,4 +4,4 @@ echo deploying
 
 npm run build
 
-# rsync -crv dist/* server/* misc/* functal:/home/ec2-user/d3-react/
+aws s3 sync dist s3://pjo-d3-react --size-only --acl public-read

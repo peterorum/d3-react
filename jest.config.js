@@ -16,6 +16,7 @@ module.exports = {
     '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/mocks/image-mock.js',
     '^Components(.*)$': '<rootDir>/src/components$1',
+    '^Containers(.*)$': '<rootDir>/src/containers$1',
     '^Styles(.*)$': '<rootDir>/src/styles$1',
     '^Images(.*)$': '<rootDir>/images$1',
     '^Redux(.*)$': '<rootDir>/src/redux$1',
