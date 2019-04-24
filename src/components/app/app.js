@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 import { Box, Grommet } from 'grommet';
 
@@ -26,11 +27,24 @@ export const App = () => (
   <>
     <Grommet theme={theme} full>
       <GlobalStyle />
-      <Box fill>
-        <Main />
-        <Page2 />
-        <Page3 />
-      </Box>
+
+      <ReactFullpage
+        render={() => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <Main />
+              </div>
+              <div className="section">
+                <Page2 />
+              </div>
+              <div className="section">
+                <Page3 />
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
     </Grommet>
   </>
 );

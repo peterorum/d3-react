@@ -72,6 +72,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
+    "@fullpage/react-fullpage": "^0.1.14",
     "grommet": "^2.6.6",
     "grommet-icons": "^4.2.0",
     "immer": "^3.1.1",

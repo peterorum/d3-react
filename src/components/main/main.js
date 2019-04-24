@@ -13,8 +13,6 @@ import { Box, Button, Image } from 'grommet';
 import { getCatUrl } from 'Redux/actions/cat-actions';
 import { makeCatUrlSelector } from 'Redux/selectors/cat-selectors';
 
-import { Page } from 'Styles/page';
-
 const PhotoBox = styled(Box)`
   &.photo {
     transition: opacity 1s ease-in;
@@ -45,34 +43,28 @@ export const Main = ({ catUrl, handleCatUrl }) => {
   };
 
   return (
-    <Page>
-      <Box
-        alignSelf="center"
-        align="center"
-        pad={{ vertical: 'medium' }}
-        direction="column"
-      >
-        <Box>
-          <Button
-            label="Another"
-            disabled={isLoading}
-            onClick={() => {
-              getCats();
-            }}
-          />
-        </Box>
-
-        <PhotoBox pad="medium" className={`photo ${isLoading ? 'hidden' : ''}`}>
-          {catUrl && (
-            <Image
-              src={catUrl}
-              onLoad={() => setIsLoading(false)}
-              fit="cover"
-            />
-          )}
-        </PhotoBox>
+    <Box
+      alignSelf="center"
+      align="center"
+      pad={{ vertical: 'medium' }}
+      direction="column"
+    >
+      <Box>
+        <Button
+          label="Another"
+          disabled={isLoading}
+          onClick={() => {
+            getCats();
+          }}
+        />
       </Box>
-    </Page>
+
+      <PhotoBox pad="medium" className={`photo ${isLoading ? 'hidden' : ''}`}>
+        {catUrl && (
+          <Image src={catUrl} onLoad={() => setIsLoading(false)} fit="cover" />
+        )}
+      </PhotoBox>
+    </Box>
   );
 };
 
