@@ -7,9 +7,9 @@ import 'sanitize.css';
 import { GlobalStyle } from 'Styles/global-styles';
 import { colors } from 'Styles/colors';
 
-import { AppBar } from 'Components/app-bar/app-bar';
 import Main from 'Components/main/main';
-import { Footer } from 'Components/footer/footer';
+import Page2 from 'Components/page-2/page-2';
+import Page3 from 'Components/page-3/page-3';
 
 const theme = {
   global: {
@@ -28,6 +28,8 @@ export const App = () => (
       <GlobalStyle />
       <Box fill>
         <Main />
+        <Page2 />
+        <Page3 />
       </Box>
     </Grommet>
   </>
