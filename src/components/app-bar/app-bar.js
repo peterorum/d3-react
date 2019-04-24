@@ -15,7 +15,7 @@ export const AppBar = props => (
     {...props}
   >
     <Heading level="3" margin="none" color="white">
-      Cats
+      Presentation
     </Heading>
   </Box>
 );

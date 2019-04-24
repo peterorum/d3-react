@@ -5,6 +5,7 @@ import { Box, Grommet } from 'grommet';
 import 'sanitize.css';
 
 import { GlobalStyle } from 'Styles/global-styles';
+import { colors } from 'Styles/colors';
 
 import { AppBar } from 'Components/app-bar/app-bar';
 import Main from 'Components/main/main';
@@ -16,7 +17,7 @@ const theme = {
       family: 'Lato',
     },
     colors: {
-      brand: '#ff6600',
+      brand: colors.primary,
     },
   },
 };
