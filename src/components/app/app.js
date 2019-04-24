@@ -27,9 +27,7 @@ export const App = () => (
     <Grommet theme={theme} full>
       <GlobalStyle />
       <Box fill>
-        <AppBar />
         <Main />
-        <Footer />
       </Box>
     </Grommet>
   </>

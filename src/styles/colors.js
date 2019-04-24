@@ -1,11 +1,11 @@
 /*
 #bc6027 chocolate
-#6ec3cb medium aquamarine
-#c9cfd1 light steel
-#4b4e4f dark slate gray
-#50909a cadet blue
+#6ec3cb mediumaquamarine
+#c9cfd1 lightsteel
+#4b4e4f darkslategray
+#50909a cadetblue
 
 */
 export const colors = {
-  primary: '#50909a',
+  primary: 'cadetblue',
 };
